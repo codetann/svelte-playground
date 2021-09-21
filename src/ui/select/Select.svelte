@@ -4,6 +4,8 @@
   import { onMount } from "svelte";
 
   let isActive = false;
+  export let value;
+
   const handleActive = () => (isActive = !isActive);
 
   onMount(() => {
@@ -25,7 +27,7 @@
       class=" cursor-pointer relative w-full  bg-white transition ease-in duration-200 rounded-md pl-3 pr-10 py-2 px-4   text-left  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:border-indigo-500 focus:ring-offset-indigo-200 sm:text-sm"
     >
       <span class="flex items-center">
-        <span class="ml-3 block truncate"> John Jackson </span>
+        <span class="ml-3 block truncate"> {value ?? "Select name"} </span>
       </span>
       <span
         class="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"

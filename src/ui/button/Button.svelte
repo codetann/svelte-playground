@@ -26,13 +26,15 @@
 {/if}
 
 {#if !withIcon}
-  <button
-    on:click
-    type="button"
-    class="px-4 py-2 font-medium tracking-wide  text-white capitalize transition-colors duration-200 transform bg-blue-600 rounded-md dark:bg-gray-800 hover:bg-blue-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-blue-500 dark:focus:bg-gray-700"
-  >
-    <slot />
-  </button>
+  <div>
+    <button
+      on:click
+      type="button"
+      class="px-4 py-2 font-medium text-sm border-transparent tracking-wide text-white capitalize transition ease-in duration-150 transform bg-blue-600 rounded-md dark:bg-gray-800 hover:bg-blue-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-blue-500 focus:ring-offset-blue-200  dark:focus:bg-gray-700 focus:ring-2 focus:ring-offset-2 "
+    >
+      <slot />
+    </button>
+  </div>
 {/if}
 
 <!-- {#if !withIcon}

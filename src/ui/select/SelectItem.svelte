@@ -1,16 +1,19 @@
 <script>
-  // your script goes here
+  export let value;
 </script>
 
 <li
-  id="listbox-item-0"
-  role="option"
-  class="text-gray-900 cursor-default hover:bg-indigo-500 hover:text-white select-none relative py-2 pl-3 pr-9"
+  id={value}
+  on:click
+  class="text-gray-900 cursor-default hover:bg-blue-600 hover:text-white select-none relative py-2 pl-6 pr-9 font-normal"
 >
-  <div class="flex items-center">
-    <span class="ml-3 block font-normal truncate"> <slot /> </span>
-  </div>
-  <span class="absolute inset-y-0 right-0 flex items-center pr-4">
+  <slot />
+  <!-- <div class="flex items-center" id={value}>
+    <span class="ml-3 block font-normal truncate" id={value}>
+      <slot />
+    </span>
+  </div> -->
+  <!-- <span class="absolute inset-y-0 right-0 flex items-center pr-4">
     <svg
       class="h-5 w-5"
       xmlns="http://www.w3.org/2000/svg"
@@ -24,5 +27,5 @@
         clip-rule="evenodd"
       />
     </svg>
-  </span>
+  </span> -->
 </li>
